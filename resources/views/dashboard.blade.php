@@ -7,6 +7,8 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
 
+    <div class="alert alert-success flash-message mt-2" role="alert" style="display:none;">
+    </div>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -38,7 +40,7 @@
                     </form>
 
 
-                    <div class="card-columns" id="address_show" style="display:none;" >
+                    <div class="card-columns" id="address_show" style="display:none;">
                         <div class="card">
 
                             <div class="card-body text-center">
@@ -99,12 +101,14 @@ $(document).on('click', '.update_data', function(e) {
         contentType: "application/json; charset=utf-8",
         success: function(response) {
             if (response.status == 200) {
-                $('#address_show').css('display', 'block');  
-                // $("#address").show();
+                $('#address_show').css('display', 'block');
                 $("#individual_address").html(response.address);
                 $("#standard_address").html(response.usps);
-                
-            } else if(response.status == 202){
+                if (response.message) {
+                    $('div.flash-message').html(response.message).css('display', 'block');
+                }
+
+            } else if (response.status == 202) {
                 alert(response.error);
                 $("#alert").html(response.error);
 

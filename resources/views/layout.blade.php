@@ -18,6 +18,7 @@
 
     .navbar-laravel {
         box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
+        margin-bottom: 20px;
     }
 
     .navbar-brand,

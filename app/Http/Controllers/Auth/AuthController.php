@@ -133,13 +133,12 @@ class AuthController extends Controller
       else{
         $id = Auth::user()->id;
         $user = User::find($id);
-        $user->address = $request->address;
-
+        $user->address = $request->standardized;
         $user->save();
 
           return response()->json([
             'status' => 200,
-            'message' => 'Update succesfully'
+            'message' =>'Address add Successfully'
         ]);
       }
       
