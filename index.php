@@ -156,7 +156,7 @@
                         <div class="title">Which address format do you want to save?</div>
                         <ul class="nav nav-pills">
                              <li class="active"><a data-toggle="pill" href="#uploadTab" id="tabLinks">ORIGINAL</a></li>
-                            <li ><a href="#browseTab" id="tabLinks"  data-toggle="pill">STANDARIZAD (USPS)</a>
+                            <li ><a href="#browseTab"  data-toggle="pill">STANDARIZAD (USPS)</a>
 
                             </li>
                         </ul>

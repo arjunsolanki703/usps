@@ -20,10 +20,10 @@ exit();
         $input_xml = <<<EOXML
         <AddressValidateRequest USERID="262DIGNI1213">
             <Address ID="0">
-                <Address1> $data->address_1</Address1>
-                <Address2> $data->address_2</Address2>
-                <City> $data->city</City>
-                <State> $data->state</State>
+                <Address1>$data->address_1</Address1>
+                <Address2>$data->address_2</Address2>
+                <City>$data->city</City>
+                <State>$data->state</State>
                 <Zip5>$data->zip</Zip5>
                 <Zip4></Zip4>
             </Address>
